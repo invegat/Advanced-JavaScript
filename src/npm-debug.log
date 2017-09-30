@@ -1,0 +1,60 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\Mark\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   '-S',
+1 verbose cli   'arrays.js' ]
+2 info using npm@3.10.5
+3 info using node@v8.5.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData arrays.js
+8 silly fetchOtherPackageData arrays.js
+9 silly cache add args [ 'arrays.js', null ]
+10 verbose cache add spec arrays.js
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'arrays.js',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: 'arrays.js',
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'arrays.js',
+11 silly cache add   spec: 'G:\\lambda\\Advanced-JavaScript\\src\\arrays.js',
+11 silly cache add   type: 'local' }
+12 silly addLocalTarball shasum (computed) 7a8d0d3026af996773eaeb5caee43183a45daa30
+13 verbose addTmpTarball G:\lambda\Advanced-JavaScript\src\arrays.js not in flight; adding
+14 verbose correctMkdir C:\Users\Mark\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+15 verbose addTmpTarball validating metadata from G:\lambda\Advanced-JavaScript\src\arrays.js
+16 verbose tar unpack G:\lambda\Advanced-JavaScript\src\arrays.js
+17 verbose tar unpacking to C:\Users\Mark\AppData\Local\Temp\npm-23536-93b7950c\unpack-c53d7731
+18 silly gentlyRm C:\Users\Mark\AppData\Local\Temp\npm-23536-93b7950c\unpack-c53d7731 is being purged
+19 verbose gentlyRm don't care about contents; nuking C:\Users\Mark\AppData\Local\Temp\npm-23536-93b7950c\unpack-c53d7731
+20 silly gunzTarPerm modes [ '777', '666' ]
+21 error not a package G:\lambda\Advanced-JavaScript\src\arrays.js
+22 error addLocal Could not install G:\lambda\Advanced-JavaScript\src\arrays.js
+23 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\Mark\AppData\Local\Temp\npm-23536-93b7950c\unpack-c53d7731\package.json'
+23 silly fetchPackageMetaData  error for arrays.js { Error: ENOENT: no such file or directory, open 'C:\Users\Mark\AppData\Local\Temp\npm-23536-93b7950c\unpack-c53d7731\package.json'
+23 silly fetchPackageMetaData   errno: -4058,
+23 silly fetchPackageMetaData   code: 'ENOENT',
+23 silly fetchPackageMetaData   syscall: 'open',
+23 silly fetchPackageMetaData   path: 'C:\\Users\\Mark\\AppData\\Local\\Temp\\npm-23536-93b7950c\\unpack-c53d7731\\package.json' }
+24 silly rollbackFailedOptional Starting
+25 silly rollbackFailedOptional Finishing
+26 silly runTopLevelLifecycles Starting
+27 silly runTopLevelLifecycles Finishing
+28 silly install printInstalled
+29 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\Mark\AppData\Local\Temp\npm-23536-93b7950c\unpack-c53d7731\package.json'
+30 verbose cwd G:\lambda\Advanced-JavaScript\src
+31 error Windows_NT 10.0.10586
+32 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Users\\Mark\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "i" "-S" "arrays.js"
+33 error node v8.5.0
+34 error npm  v3.10.5
+35 error path C:\Users\Mark\AppData\Local\Temp\npm-23536-93b7950c\unpack-c53d7731\package.json
+36 error code ENOENT
+37 error errno -4058
+38 error syscall open
+39 error enoent ENOENT: no such file or directory, open 'C:\Users\Mark\AppData\Local\Temp\npm-23536-93b7950c\unpack-c53d7731\package.json'
+40 error enoent ENOENT: no such file or directory, open 'C:\Users\Mark\AppData\Local\Temp\npm-23536-93b7950c\unpack-c53d7731\package.json'
+40 error enoent This is most likely not a problem with npm itself
+40 error enoent and is related to npm not being able to find a file.
+41 verbose exit [ -4058, true ]

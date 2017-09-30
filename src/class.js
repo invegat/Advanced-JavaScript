@@ -1,14 +1,10 @@
 // Create a class called User.
 // The constructor of the class should have a parameter called `options`.
 // `options` will be an object that will have the properties `email` and `password`.
-// Set the `email` and `password` properties on the class.
+// Set the `email` and `password` properties on  the class.
 // Add a method called `comparePasswords`.  `comparePasswords` should have a parameter
 // for a potential password that will be compared to the `password` property.
 // Return true if the potential password matches the `password` property.  Otherwise return false.
-
-
-/* eslint-disable no-undef */ // Remove this comment once you write your classes.
-
 
 // Create a class called `Animal` and a class called `Cat`.
 // `Cat` should extend the `Animal` class.
@@ -18,7 +14,36 @@
 // Cat should have the property `name` that is set in the constructor and the method
 // `meow` that should return the string `<name> meowed!` where `<name>` is the `name`
 // property set on the Cat instance.
+class User {
+  constructor(options) {
+    this.email = options.email
+    this.password = options.password
+    this.comparePasswords = this.comparePasswords.bind(this)
+  }
+  comparePasswords(password) {
+    return this.password === password
+  }
+}
+class Animal {
+  constructor(options) {
+    this.age = options.age
+    this.growOlder = this.growOlder.bind(this)
+  }
+  growOlder() {
+    return ++this.age
+  }
+}
+class Cat extends Animal {
+  constructor(options) {
+    super(options)
+    this.name = options.name
+    this.meow = this.meow.bind(this)
+  }
+  meow() {
+    return `${this.name} meowed!`
+  }
 
+}
 
 module.exports = {
   User,

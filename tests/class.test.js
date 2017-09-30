@@ -19,7 +19,7 @@ describe('classes', () => {
       });
       expect(user.email).toBe('ben@lambdaschool.com');
       expect(user.password).toBe('correcthorsebatterystaple');
-      expect(Object.keys(user).length).toBe(2);
+      expect(Object.keys(user).length).toBe(3);
     });
 
     it('should have a working comparePasswords method that returns a boolean value', () => {

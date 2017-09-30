@@ -7,50 +7,53 @@
 //----------------
 // const, =>, default parameters, arrow functions default return statements using ()
 
-var food = 'pineapple';
+let food = 'pineapple';
 
-var isMyFavoriteFood = function(food) {
-  food = food || 'thousand-year-old egg'; //This sets a default value if `food` is falsey
+let isMyFavoriteFood = (food = 'thousand-year-old egg') => {
   return food === 'thousand-year-old egg';
 };
 
-var isThisMyFavorite = isMyFavoriteFood(food);
+let isThisMyFavorite = isMyFavoriteFood(food);
 
 //----------------
 //const, class, template literals, enhanced object literals (foo: foo, -> foo,)
 
-var User = function(options) {
+class User {
+  constructor(options) {
   this.username = options.username;
   this.password = options.password;
-  this.sayHi = function() {
-    return this.username + ' says hello!';
+  this.sayHi = () => {
+    return `${this.username} says hello!`;
   };
 }
+}
 
-var username = 'JavaScriptForever';
-var password = 'password';
+const username = 'JavaScriptForever';
+const password = 'password';
 
-var me = new User({
-  username: username,
-  password: password,
+let me = new User({
+  username,
+  password
 });
 
 // ----------------
 // let, const, =>, ... (spread operator)
 
-var addArgs = function () {
-  var sum = 0;
-  for (var i = 0; i < arguments.length; i++) {
-    sum += arguments[i];
+function addArgs() {
+  let sum = 0;
+  let numbers = arguments[0]
+  for (var i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
   }
   return sum;
 };
 
-var argsToCb = function (cb) {
-  var args = Array.prototype.slice.call(arguments);
-  return cb.apply(null, args.splice(1));
+function argsToCb() {
+  let [cb,...args] = Array.prototype.slice.call(arguments);
+  return cb(args);
 };
 
-var result = argsToCb(addArgs, 1, 2, 3, 4, 5); //result should be 15
+const result = argsToCb(addArgs, 1, 2, 3, 4, 5); //result should be 15
+
 
 /* eslint-enable */
