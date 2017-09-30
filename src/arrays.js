@@ -22,7 +22,7 @@ const reduce = (elements, cb, memo = elements.shift()) => {
   }
   let acc = memo
   for (let i = 0; i < elements.length; i++) {
-    acc = cb(acc, elements[i])
+    acc = cb(acc, elements[i], i)
   }
   return acc
 }
